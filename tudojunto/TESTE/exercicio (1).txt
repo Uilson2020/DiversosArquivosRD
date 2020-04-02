@@ -1,0 +1,53 @@
+* Pré-requisitos:
+   - Criar a pasta TESTE na pasta Documentos;
+   - Baixar do SLACK o SCRIPT ambiente.sql;
+   - abrir o Shell do Mysql e navegar até a pasta TESTE;
+   - Iniciar o Mysql nesta pasta;
+   - Criar o Banco de Dados TESTE;
+   - Executar o Script ambiente.sql utilizando o comando source;
+     - Este script irá inserir todos os dados de cadastro e dicionários (tabelas de tipo) assim como irá preencher a tabela de estoque
+	   para todos os produtos e filiais cadastradas com o valor inicial ZERO na coluna de estoque disponível.
+
+
+* O objetivo do exercício é a gerarção de dois relatórios com o comando select:
+  - Um relatório de estoque dos produtos registrador na TB_ESTOQUE.
+     - o relatório deve conter:
+	     - Código da Filial;
+		 - Nome da Filial;
+		 - Código do Produto;
+		 - Nome do Produto;
+		 - Quantidade em Estoque
+	 - O relatório deve ser ordenado por Código da Filial.
+
+  - Um relatório de Notas Fiscais.
+     - o relatório deve conter:
+         - Número da Nota;
+         - Data de Emissão;
+		 - Número do Pedido;
+		 - Código do Tipo do Pedido;
+		 - Descrição do Tipo do Pedido;
+         - Código do Tipo de Operação;
+         - Descrição do Tipo de Operação;
+		 - Código da Filial;
+		 - Nome da Filial;
+		 - Descrição do Tipo da Filial;
+		 - Código do Produto;
+		 - Descrição do Produto;
+		 - Quantidade Total de Produtos (utilizando a função SUM());
+	 - O relatório deve ser ordenado pelo Tipo e Operação;
+	 - O número das notas (NR_NOTA) deve iniciar em 10 e ser incrementado de 10 em 10.
+
+Ao término, commitar as consultas no Git e enviar o link pelo Slack.
+
+OBS.: Para a geração dos relatórios, é necessário:
+       - Criação de pelo menos dois tipos de pedidos (Compra e Venda);
+	   - Criação de pelo menos duas notas fiscais (Compra e Venda);
+	      - Lembrando que o saldo dos produto contidos na nota de compra deve ser maior que as quantidades da nota de venda.
+	   - Inserção dos dados de pedido e nota na tabela TB_PEDIDO_NOTA para que as entidades de nota e pedido sejam relacionadas.	  
+	   - Inserção das notas na tabela de movimentações;
+	   - Atualização dos saldos de estoque na tabela TB_ETOQUE.
+OBS.: Para ambas as notas, a coluna ID_FILIAL é obrigatória (Filial que efetuou a venda e CD que recebeu a mercadoria do fornecedor);
+      Colunas não obrigatórias devem ser inseridas com o valor NULL quando o valor real não estiver disponível.  
+
+
+   

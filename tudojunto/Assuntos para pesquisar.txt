@@ -1,0 +1,9 @@
+pesquisar:
+jpa
+errorHandler
+controller
+view
+repository
+
+throw
+responseStatusException

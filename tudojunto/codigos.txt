@@ -1,0 +1,65 @@
+var  numeros = [];
+
+
+function produto (inicio, fim){
+    for (var i = inicio; i<=fim; i++){
+    numeros.push(i);
+    }
+    return numeros;
+}
+
+function multiplica(numeros){
+    var multiplicaNumeros = 0;
+    for (var i = 0; i<= numeros.length; i++){
+        multipica = multiplica * numeros[i];
+    }
+    return multiplicaNumeros;
+}
+////////////////////////////////////////////////////////////////////////////////////
+
+function produto (array){
+  var multiplica = 0;
+  for (var pos=0; pos <= array.length; pos++){
+    multiplica = multiplica * array[pos];
+  }
+  return multiplica;
+}
+///////////////////////////////////////////////////////////////////////////////////////
+
+var fatorial=1;
+var numero = 1;
+
+for (var x=1; x<=numero; x++){
+  fatorial = fatorial * x;
+}
+return fatorial;
+
+function acontece(teraAula){
+  var estudantesPresentes = teraAula;
+  if(estudantesPresentes >= 2){
+    return true;
+  }else{
+    return false;
+  }
+  
+}
+
+function aberturas(fPassada, quantidadeAlunos){
+  var diasDaSemana = fPassada;
+  var quant = quantidadeAlunos;
+  if (quant < 2){
+    return false;
+  }else if (quant >=2){
+    return true;
+  }
+}
+////////////////////////////////////////////////////////////////////////
+
+function escada(umNumero){
+  var degrau = "".repeat(1);
+  for (var pos=0; pos<umNumero; pos++){
+    degrau = degrau +"#";
+  }
+  
+  return degrau;
+}
